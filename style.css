@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+}
+
+body, button {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  width: 42.8rem;
+  background: #FFFFFF;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+
+  text-align: center;
+  padding: 4.8rem 6.4rem;
+}
+
+/* ScreenOne */
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #34355B;
+
+  margin-bottom: 1.4rem;
+}
+
+.screenOne p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  color: #34355B;
+  
+  margin-bottom: 2rem;
+}
+
+.screenOne img:hover { 
+  animation: shakeCookie 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  cursor: pointer;
+}
+
+/* ScreenTwo */
+
+.screenTwo p {
+  width: 29.3rem;
+  font-family: 'Dancing Script', sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #000000;
+  text-align: center;
+
+  background: #E4EDF1;
+  box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+
+  padding: 1rem;
+
+  margin: 1.7rem auto;
+
+  animation: phrases 5s;
+}
+
+.screenTwo button {
+  width: 17.4rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+
+  background: #FF9500;
+  border-radius: .4rem;
+  border: none;
+
+  transition: background .3s;
+  padding: 1.6rem;
+}
+
+.screenTwo button:hover {
+  cursor: pointer;
+  background: #eb9f34;
+}
+
+/* Animation */
+
+@keyframes shakeCookie {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 1rem;
+  }
+  50% {
+      margin-left: .5rem; 
+      rotate: -1deg;
+    }
+  75% {
+    margin-left: 1rem;
+  }
+  100% {
+    margin-left: .5rem; 
+    rotate: 1deg;
+  }
+}
+
+@keyframes phrases {
+  0% {
+    transform: translateY(19rem) scale(0)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
